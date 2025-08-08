@@ -14,7 +14,7 @@ export const TodoSchema = z.object({
     tags: z.array(z.string().trim().min(1)).default([])
 })
 .superRefine((obj, ctx)=>{
-    if(obj.dueDate && obj.dueDate <= obj.createdAt){
+    if(obj.dueDate && obj.dueDate < obj.createdAt){
         ctx.addIssue({code: 'custom', path: ['dueDate'], message: 'dueDate cannot be earlier than createdAt'})
     }
     if(obj.status === 'completed') {
