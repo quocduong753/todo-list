@@ -1,0 +1,46 @@
+:root {
+  /* Typography */
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --fs-base: 16px;
+  --fs-sm: 0.875rem;   /* 14px */
+  --fs-md: 1rem;       /* 16px */
+  --fs-lg: 1.125rem;   /* 18px */
+  --fs-xl: 1.25rem;    /* 20px */
+  --fs-2xl: 1.5rem;    /* 24px */
+  --fs-3xl: 1.875rem;  /* 30px */
+  --fs-4xl: 2.25rem;   /* 36px */
+
+  /* Colors */
+  --color-bg: 0 0% 100%;
+  --color-fg: 222 47% 11%;
+  --color-muted: 215 16% 45%;
+
+  --color-primary: 245 86% 60%;
+  --color-secondary: 222 84% 56%;
+  --color-success: 142 71% 45%;
+  --color-warning: 38 92% 50%;
+  --color-danger: 0 84% 60%;
+  --color-info: 201 100% 40%;
+
+  --color-card: 0 0% 100%;
+  --color-border: 214 32% 91%;
+
+  /* Radius & shadow */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 10px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Dark mode: chỉ cần set data-theme="dark" trên <html> */
+:root[data-theme="dark"] {
+  --color-bg: 222 47% 11%;
+  --color-fg: 0 0% 100%;
+  --color-muted: 215 20% 75%;
+
+  --color-card: 222 40% 14%;
+  --color-border: 217 19% 27%;
+}

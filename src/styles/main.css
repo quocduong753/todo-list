@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+@import './tokens.css';
+@config "../../tailwind.config.js";
+
+/* Reset & base typography */
+@layer base {
+  html { font-family: var(--font-sans); }
+  body { @apply bg-background text-foreground; }
+
+  h1 { @apply text-4xl font-bold tracking-tight; }
+  h2 { @apply text-3xl font-semibold tracking-tight; }
+  h3 { @apply text-2xl font-semibold; }
+  h4 { @apply text-xl font-semibold; }
+  h5 { @apply text-lg font-medium; }
+  h6 { @apply text-base font-medium; }
+
+  p.muted { @apply text-muted; }
+}
+
+/* Semantic utility classes */
+@layer components {
+  .container-page { @apply container mx-auto; }
+
+  .card { @apply bg-card shadow rounded-md border border-border; }
+  .card-body { @apply p-4; }
+  .card-title { @apply text-xl font-semibold; }
+
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-md px-3.5 py-2 font-medium shadow transition active:scale-[0.98]; }
+  .btn-primary { @apply bg-primary text-white hover:bg-primary/90; }
+  .btn-secondary { @apply bg-secondary text-white hover:bg-secondary/90; }
+  .btn-ghost { @apply bg-transparent text-foreground hover:bg-foreground/10; }
+  .btn-outline { @apply border border-border text-foreground hover:bg-foreground/5; }
+  .btn-danger { @apply bg-danger text-white hover:bg-danger/90; }
+  .btn-success { @apply bg-success text-white hover:bg-success/90; }
+  .btn-warning { @apply bg-warning text-black hover:bg-warning/90; }
+  .btn-sm { @apply px-3 py-1.5 text-sm; }
+  .btn-lg { @apply px-4 py-2.5 text-lg; }
+
+  .input { @apply w-full rounded-md border border-border bg-background px-3 py-2 outline-none focus:ring-2 focus:ring-primary/30; }
+  .select { @apply appearance-none; }
+  .textarea { @apply min-h-[120px]; }
+
+  .badge { @apply inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium; }
+  .badge-primary { @apply bg-primary/15 text-primary border border-primary/30; }
+  .badge-success { @apply bg-success/15 text-success border border-success/30; }
+  .badge-warning { @apply bg-warning/20 text-warning border border-warning/40; }
+  .badge-danger { @apply bg-danger/15 text-danger border border-danger/30; }
+  .badge-info { @apply bg-info/15 text-info border border-info/30; }
+
+  .alert { @apply rounded-md border p-3; }
+  .alert-success { @apply border-success/40 bg-success/10 text-success; }
+  .alert-warning { @apply border-warning/50 bg-warning/15 text-warning; }
+  .alert-danger  { @apply border-danger/40  bg-danger/10  text-danger; }
+  .alert-info    { @apply border-info/40    bg-info/10    text-info; }
+
+  .header { @apply sticky top-0 z-40 bg-background/80 backdrop-blur border-b border-border; }
+  .header-inner { @apply flex h-14 items-center justify-between; }
+
+  .link { @apply text-primary underline underline-offset-2 hover:opacity-80; }
+}
